@@ -1,0 +1,9 @@
+The result for equation: (-b +- sqrt(b * b - 4 * a * c)) / (2 * a) is:
+x1 = 0
+x2 = -1e+23
+The result for equation: (2 * c) / (-b +- sqrt(b * b - 4 * a * c)) is:
+x1 = inf
+x2 = -1
+The result for equation: - (c / b); -(b / a) + (c / b) is:
+x1 = -1
+x2 = -1e+23
