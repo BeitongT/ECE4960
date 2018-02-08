@@ -1,0 +1,42 @@
+function 1(h)   h = 0.0002the result is: 3.0006 the relative error is: 0.0200013%
+function 2(2h)  h = 0.0002the result is: 3.0012 the relative error is: 0.0400053%
+function 3(2rd) h = 0.0002the result is: 3 the relative error is: 2.6667e-06%
+Richardson Coefficient Without Known Truth h = 0.0002 the result is : 2.00013
+Richardson Extrapolation Coefficient       h = 0.0002 the result is : 2.0004
+
+function 1(h)   h = 2e-05the result is: 3.00006 the relative error is: 0.00200001%
+function 2(2h)  h = 2e-05the result is: 3.00012 the relative error is: 0.00400005%
+function 3(2rd) h = 2e-05the result is: 3 the relative error is: 2.76486e-08%
+Richardson Coefficient Without Known Truth h = 2e-05 the result is : 2.00001
+Richardson Extrapolation Coefficient       h = 2e-05 the result is : 2.00004
+
+function 1(h)   h = 2e-06the result is: 3.00001 the relative error is: 0.000200002%
+function 2(2h)  h = 2e-06the result is: 3.00001 the relative error is: 0.000399998%
+function 3(2rd) h = 2e-06the result is: 3 the relative error is: 7.76102e-09%
+Richardson Coefficient Without Known Truth h = 2e-06 the result is : 1.99997
+Richardson Extrapolation Coefficient       h = 2e-06 the result is : 2.00006
+
+function 1(h)   h = 2e-07the result is: 3 the relative error is: 1.99314e-05%
+function 2(2h)  h = 2e-07the result is: 3 the relative error is: 4.00079e-05%
+function 3(2rd) h = 2e-07the result is: 3 the relative error is: 1.24176e-07%
+Richardson Coefficient Without Known Truth h = 2e-07 the result is : 2.00728
+Richardson Extrapolation Coefficient       h = 2e-07 the result is : 1.99217
+
+function 1(h)   h = 2e-08the result is: 3 the relative error is: 2.72292e-06%
+function 2(2h)  h = 2e-08the result is: 3 the relative error is: 3.83314e-06%
+function 3(2rd) h = 2e-08the result is: 3 the relative error is: 1.98682e-06%
+Richardson Coefficient Without Known Truth h = 2e-08 the result is : 1.40773
+Richardson Extrapolation Coefficient       h = 2e-08 the result is : 3.75
+
+function 1(h)   h = 2e-09the result is: 3 the relative error is: 2.82819e-06%
+function 2(2h)  h = 2e-09the result is: 3 the relative error is: 2.72292e-06%
+function 3(2rd) h = 2e-09the result is: 3 the relative error is: 7.94729e-06%
+Richardson Coefficient Without Known Truth h = 2e-09 the result is : 0.962778
+Richardson Extrapolation Coefficient       h = 2e-09 the result is : -0.333333
+
+function 1(h)   h = 2e-10the result is: 3 the relative error is: 8.27404e-06%
+function 2(2h)  h = 2e-10the result is: 3 the relative error is: 8.27404e-06%
+function 3(2rd) h = 2e-10the result is: 3 the relative error is: 0%
+Richardson Coefficient Without Known Truth h = 2e-10 the result is : 1
+Richardson Extrapolation Coefficient       h = 2e-10 the result is : nan
+
