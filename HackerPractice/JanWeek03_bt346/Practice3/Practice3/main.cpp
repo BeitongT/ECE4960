@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
         exit(1);
     }
     
-    double h = 2e-4;
+    double h = pow(2,-4);
     double fx1 = 0;
     double fx2 = 0;
     double fx3 = 0;
@@ -36,7 +36,7 @@ int main(int argc, const char * argv[]) {
     double x = 1;
     double n1 = 0;
     double n2 = 0;
-    for(; h>=2e-10; h/=10) {
+    for(; h>=pow(2,-10); h/=2) {
         cout << "h now is: " << h<< endl;
         fx1 = ((x + h)*(x + h)*(x + h) - x*x*x)/h;
         fx2 = ((x + 2*h)*(x + 2*h)*(x + 2*h) - x*x*x)/2/h;
