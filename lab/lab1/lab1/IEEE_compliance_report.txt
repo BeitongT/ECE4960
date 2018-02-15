@@ -1,8 +1,0 @@
-OS: MAC OS; LANGUAGE: C++; CODING WITH XCODE
-Detect the Integer Overflow             PASS
-Detect Integer Divide Zero              PASS
-Detect float overflow                   PASS
-Create inf and ninf                     PASS
-Create nan                              PASS
-Create positive zero and negative zero  PASS
-Denormals with soft landing             PASS
