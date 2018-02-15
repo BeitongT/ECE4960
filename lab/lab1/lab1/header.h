@@ -17,7 +17,10 @@
 #include <stdio.h>
 using namespace std;
 
-
+#define index_result 0
+#define add_result 512559680
+#define signed_index_result 2147483648
+#define signed_add_result 1323752223
 void overflow_unsigned_int_multi(int);
 void overflow_signed_int_multi(int);
 void overflow_unsigned_int_add(int);
@@ -52,5 +55,5 @@ bool handle_exception(void (*f)());
 bool handle_exception(void (*f)(int),int para);
 bool handle_exception(void (*f)(int,int),int,int);
 bool handle_exception(int (*f)(int,int),int, int);
-double mypow(double x, double y);
+double mypow(double x, int y);
 #endif /* header_h */

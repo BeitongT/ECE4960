@@ -9,7 +9,7 @@ unsigned integer multiply overflow error
 #Using 2 index to detect the signed int overflow
 The max signed int value is 2147483647
 The overflow happens when 2^31 
-The overflow result is  2147483648
+The overflow result is  -2147483648
 signed integer multiply overflow error
 
 #Using Fibonacci sequence to detect the unsigned int overflow
@@ -21,7 +21,7 @@ unsigned integer add overflow error
 #Using Fibonacci sequence to detect the signed int overflow
 The max signed int value is 2147483647
 The overflow happens when 1134903170+1836311903
-The overflow result is 2971215073
+The overflow result is -1323752223
 signed integer add overflow error
 
 
@@ -354,26 +354,6 @@ The result for sin(10^(-46))/ |10^(-46)| is nan
 ###########FLOATING UNDERFLOW###########
 
 
-x / y is 1.234560e-01
-x / y is 1.234560e-02
-x / y is 1.234560e-03
-x / y is 1.234560e-04
-x / y is 1.234560e-05
-x / y is 1.234560e-06
-x / y is 1.234560e-07
-x / y is 1.234560e-08
-x / y is 1.234560e-09
-x / y is 1.234560e-10
-x / y is 1.234560e-11
-x / y is 1.234560e-12
-x / y is 1.234560e-13
-x / y is 1.234560e-14
-x / y is 1.234560e-15
-x / y is 1.234560e-16
-x / y is 1.234560e-17
-x / y is 1.234560e-18
-x / y is 1.234560e-19
-x / y is 1.234560e-20
 x / y is 1.234560e-21
 x / y is 1.234560e-22
 x / y is 1.234560e-23
@@ -392,13 +372,33 @@ x / y is 1.234560e-35
 x / y is 1.234560e-36
 x / y is 1.234560e-37
 x / y is 1.234560e-38
-x / y is 1.234561e-39
+x / y is 1.234559e-39
 x / y is 1.234558e-40
 x / y is 1.234544e-41
 x / y is 1.234544e-42
 x / y is 1.233143e-43
 x / y is 1.261169e-44
 x / y is 1.401298e-45
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
+x / y is 0.000000e+00
 x / y is 0.000000e+00
 x / y is 0.000000e+00
 x / y is 0.000000e+00
@@ -456,77 +456,77 @@ x is 0.000000e+00, the result is nan
 x is 0.000000e+00, the result is nan
 x is 0.000000e+00, the result is nan
 
-i = -1020, x - y is 3.125000e-02
-i = -1021, x - y is 1.562500e-02
-i = -1022, x - y is 7.812500e-03
-i = -1023, x - y is 3.906250e-03
-i = -1024, x - y is 1.953125e-03
-i = -1025, x - y is 9.765625e-04
-i = -1026, x - y is 4.882812e-04
-i = -1027, x - y is 2.441406e-04
-i = -1028, x - y is 1.220703e-04
-i = -1029, x - y is 6.103516e-05
-i = -1030, x - y is 3.051758e-05
-i = -1031, x - y is 1.525879e-05
-i = -1032, x - y is 7.629395e-06
-i = -1033, x - y is 3.814697e-06
-i = -1034, x - y is 1.907349e-06
-i = -1035, x - y is 9.536743e-07
-i = -1036, x - y is 4.768372e-07
-i = -1037, x - y is 2.384186e-07
-i = -1038, x - y is 1.192093e-07
-i = -1039, x - y is 5.960464e-08
-i = -1040, x - y is 2.980232e-08
-i = -1041, x - y is 1.490116e-08
-i = -1042, x - y is 7.450581e-09
-i = -1043, x - y is 3.725290e-09
-i = -1044, x - y is 1.862645e-09
-i = -1045, x - y is 9.313226e-10
-i = -1046, x - y is 4.656613e-10
-i = -1047, x - y is 2.328306e-10
-i = -1048, x - y is 1.164153e-10
-i = -1049, x - y is 5.820766e-11
-i = -1050, x - y is 2.910383e-11
-i = -1051, x - y is 1.455192e-11
-i = -1052, x - y is 7.275958e-12
-i = -1053, x - y is 3.637979e-12
-i = -1054, x - y is 1.818989e-12
-i = -1055, x - y is 9.094947e-13
-i = -1056, x - y is 4.547474e-13
-i = -1057, x - y is 2.273737e-13
-i = -1058, x - y is 1.136868e-13
-i = -1059, x - y is 5.684342e-14
-i = -1060, x - y is 2.842171e-14
-i = -1061, x - y is 1.421085e-14
-i = -1062, x - y is 7.105427e-15
-i = -1063, x - y is 3.552714e-15
-i = -1064, x - y is 1.776357e-15
-i = -1065, x - y is 8.881784e-16
-i = -1066, x - y is 4.440892e-16
-i = -1067, x - y is 2.220446e-16
-i = -1068, x - y is 1.110223e-16
-i = -1069, x - y is 5.551115e-17
-i = -1070, x - y is 2.775558e-17
-i = -1071, x - y is 1.387779e-17
-i = -1072, x - y is 6.938894e-18
-i = -1073, x - y is 3.469447e-18
-i = -1074, x - y is 1.734723e-18
-i = -1075, x - y is 8.673617e-19
-i = -1076, x - y is 4.336809e-19
-i = -1077, x - y is 2.168404e-19
-i = -1078, x - y is 1.084202e-19
-i = -1079, x - y is 5.421011e-20
+i = -1020, x - y is 2.781342e-309
+i = -1021, x - y is 1.390671e-309
+i = -1022, x - y is 6.953356e-310
+i = -1023, x - y is 3.476678e-310
+i = -1024, x - y is 1.738339e-310
+i = -1025, x - y is 8.691695e-311
+i = -1026, x - y is 4.345847e-311
+i = -1027, x - y is 2.172924e-311
+i = -1028, x - y is 1.086462e-311
+i = -1029, x - y is 5.432309e-312
+i = -1030, x - y is 2.716155e-312
+i = -1031, x - y is 1.358077e-312
+i = -1032, x - y is 6.790387e-313
+i = -1033, x - y is 3.395193e-313
+i = -1034, x - y is 1.697597e-313
+i = -1035, x - y is 8.487983e-314
+i = -1036, x - y is 4.243992e-314
+i = -1037, x - y is 2.121996e-314
+i = -1038, x - y is 1.060998e-314
+i = -1039, x - y is 5.304989e-315
+i = -1040, x - y is 2.652495e-315
+i = -1041, x - y is 1.326247e-315
+i = -1042, x - y is 6.631237e-316
+i = -1043, x - y is 3.315618e-316
+i = -1044, x - y is 1.657809e-316
+i = -1045, x - y is 8.289046e-317
+i = -1046, x - y is 4.144523e-317
+i = -1047, x - y is 2.072262e-317
+i = -1048, x - y is 1.036131e-317
+i = -1049, x - y is 5.180654e-318
+i = -1050, x - y is 2.590327e-318
+i = -1051, x - y is 1.295163e-318
+i = -1052, x - y is 6.475817e-319
+i = -1053, x - y is 3.237909e-319
+i = -1054, x - y is 1.618954e-319
+i = -1055, x - y is 8.094772e-320
+i = -1056, x - y is 4.047386e-320
+i = -1057, x - y is 2.023693e-320
+i = -1058, x - y is 1.011846e-320
+i = -1059, x - y is 5.059232e-321
+i = -1060, x - y is 2.529616e-321
+i = -1061, x - y is 1.264808e-321
+i = -1062, x - y is 6.324040e-322
+i = -1063, x - y is 3.162020e-322
+i = -1064, x - y is 1.581010e-322
+i = -1065, x - y is 7.905050e-323
+i = -1066, x - y is 3.952525e-323
+i = -1067, x - y is 1.976263e-323
+i = -1068, x - y is 9.881313e-324
+i = -1069, x - y is 4.940656e-324
+i = -1070, x - y is 4.940656e-324
+i = -1071, x - y is 4.940656e-324
+i = -1072, x - y is 4.940656e-324
+i = -1073, x - y is 0.000000e+00
+i = -1074, x - y is 0.000000e+00
+i = -1075, x - y is 0.000000e+00
+i = -1076, x - y is 0.000000e+00
+i = -1077, x - y is 0.000000e+00
+i = -1078, x - y is 0.000000e+00
+i = -1079, x - y is 0.000000e+00
 
 Now we test x - y
-The x value is 1.687500e+00
-The y value is 1.625000e+00
+The x value is 1.501925e-307
+The y value is 1.446298e-307
 x != y, and x - y != 0.
 Using denormals
 
 ###########PI CALCULATION###########
-result now is 0.020408163265316151032259354980
-result now is 0.017543859649125797481124711293
-result now is 0.004184100418410041513060670677
-result now is 0.000009054444374020988951161197
-pi now is    3.141958476785029485967015716597
+result now is 0.020405330686538084814944703574
+result now is 0.017542060057402486806976313859
+result now is 0.004184076002074723505344289740
+result now is 0.000009054444373773552224981128
+pi now is    3.141592653589793115997963468544
 pi should be 3.141592653589793115997963468544

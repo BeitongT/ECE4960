@@ -18,8 +18,11 @@ void overflow_unsigned_int_multi(int x) {
         if (2 > (UINT_MAX / result)) {
             fprintf(pFile2,"The overflow happens when 2^%u \n", i);
             result *= 2;
-            fprintf(pFile2,"The overflow result is  %u\n" , result);
-            throw "unsigned integer multiply overflow error";
+            if (result == index_result) {
+                fprintf(pFile2,"The overflow result is  %u\n" , result);
+                throw "unsigned integer multiply overflow error";
+            }
+            break;
         }
         result *= 2;
     }
@@ -36,8 +39,12 @@ void overflow_unsigned_int_add(int x) {
         if ( result[0] + result[1] < result[0] && result[0] + result[1] < result[1]) {
             fprintf(pFile2,"The overflow happens when %u+%u\n", result[0], result[1]);
             result[0] = result[0] + result[1];
+            if (result[0] == add_result) {
             fprintf(pFile2,"The overflow result is %u\n" , result[0]);
             throw "unsigned integer add overflow error";
+            }
+            break;
+
         }
         result[0] = result[0] + result[1];
         //        fprintf(pFile2,"the result is %u\n", result[0]);
@@ -55,8 +62,10 @@ void overflow_signed_int_multi(int x) {
         if (2 > (INT_MAX / result)) {
             fprintf(pFile2,"The overflow happens when 2^%u \n", i);
             result *= 2;
-            fprintf(pFile2,"The overflow result is  %u\n" , result);
+            if (result == -signed_index_result) {
+            fprintf(pFile2,"The overflow result is  %d\n" , result);
             throw "signed integer multiply overflow error";
+            }
         }
         result *= 2;
     }
@@ -66,17 +75,19 @@ void overflow_signed_int_multi(int x) {
 
 
 void overflow_signed_int_add(int x) {
-    fprintf(pFile2,"The max signed int value is %u\n", INT_MAX);
+    fprintf(pFile2,"The max signed int value is %d\n", INT_MAX);
     int result[2] = {1, 1};
     int buffer = 1;
     //    fprintf(pFile2,"the result is %d\n", result[0]);
     //    fprintf(pFile2,"the result is %d\n", result[1]);
     for (int i = 1; i <= x; i ++) {
         if ( result[0] + result[1] < result[0] && result[0] + result[1] < result[1]) {
-            fprintf(pFile2,"The overflow happens when %u+%u\n", result[0], result[1]);
+            fprintf(pFile2,"The overflow happens when %d+%d\n", result[0], result[1]);
             result[0] = result[0] + result[1];
-            fprintf(pFile2,"The overflow result is %u\n" , result[0]);
+            if (result[0] == -signed_add_result) {
+            fprintf(pFile2,"The overflow result is %d\n" , result[0]);
             throw "signed integer add overflow error";
+            }
         }
         result[0] = result[0] + result[1];
         //        fprintf(pFile2,"the result is %d\n", result[0]);
@@ -389,20 +400,38 @@ double cal_single(int x) {
     return result;
 }
 
-double mypow(double x, double y) {
-    if (y >=0) {
-        for (int i = 0; i< y; i ++) {
-            x = x*x;
-        }
-        return x;
+//double mypow(double x, int y) {
+//    if (y >0) {
+//        for (int i = 1; i< y; i ++) {
+//            x = x*x;
+//        }
+//        return x;
+//    }
+//    else if (y < 0) {
+//        x = 1.0/x;
+//        for (int i = 1; i< -y; i ++) {
+//            x = x*x;
+//        }
+//        return x;
+//    }
+//    else return 1;
+//
+//}
+
+double mypow(double x, int y)
+{
+    double temp;
+    if( y == 0)
+        return 1;
+    temp = mypow(x, y/2);
+    if (y%2 == 0)
+        return temp*temp;
+    else
+    {
+        if(y > 0)
+            return x*temp*temp;
+        else
+            return (temp*temp)/x;
     }
-    else {
-        for (int i = 0; i< -y; i ++) {
-            x = x/x;
-        }
-        return x;
-        
-    }
-    
 }
 
