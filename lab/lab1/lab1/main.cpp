@@ -88,7 +88,7 @@ int main(int argc, const char * argv[]) {
     }
     if (INFINITY_CREATE) {
         fprintf(pFile1,"Create inf and ninf                     PASS\n");
-        fprintf(pFile1,"After observing the result, all the result are like the default results.\n");
+//        fprintf(pFile1,"After observing the result, all the result are like the default results.\n");
 
     }
     else fprintf(pFile1,"Create inf and ninf                    WRONG\n");
@@ -133,7 +133,7 @@ int main(int argc, const char * argv[]) {
     }
     if (SIGNED_ZERO) {
         fprintf(pFile1,"Create positive zero and negative zero  PASS\n");
-        fprintf(pFile1,"After observing the result, all the result are like the default results.\n");
+//        fprintf(pFile1,"After observing the result, all the result are like the default results.\n");
 
     }
     else fprintf(pFile1,"Create positive zero and negative zero  WRONG\n");
