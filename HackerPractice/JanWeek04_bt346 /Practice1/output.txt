@@ -1,0 +1,10 @@
+this result for rectangle is: 2.338670
+the relative error is       : -0.4990656056%
+this result for trapezoid is: 2.350422
+the relative error is       : 0.0009349022%
+this result for mid point is: 2.350393
+the relative error is       : -0.0003150965%
+this result for simpson is: 2.350402
+the relative error is       : 0.0001015698%
+this result for 2 point Gaussian is: 2.350402
+the relative error is       : 0.0001015692%
