@@ -10,7 +10,7 @@
 extern FILE * pFile1;
 extern FILE * pFile2;
 
-
+//using the 2 power to detect the unsigned int overflow. default result 0
 void overflow_unsigned_int_multi(int x) {
     fprintf(pFile2,"The max unsigned int value is %u\n", UINT_MAX);
     unsigned int result = 1;
@@ -29,12 +29,11 @@ void overflow_unsigned_int_multi(int x) {
     fprintf(pFile2,"The result is  %u\n.", result);
 }
 
+//using the Fibonacci sequence to detect the unsigned int overflow. default result 512559680
 void overflow_unsigned_int_add(int x) {
     fprintf(pFile2,"The max unsigned int value is %u\n", UINT_MAX);
     unsigned int result[2] = {1, 1};
     unsigned int buffer = 1;
-    //    fprintf(pFile2,"the result is %u\n", result[0]);
-    //    fprintf(pFile2,"the result is %u\n", result[1]);
     for (int i = 1; i <= x; i ++) {
         if ( result[0] + result[1] < result[0] && result[0] + result[1] < result[1]) {
             fprintf(pFile2,"The overflow happens when %u+%u\n", result[0], result[1]);
@@ -54,7 +53,7 @@ void overflow_unsigned_int_add(int x) {
     }
 }
 
-
+//using the 2 power to detect the signed int overflow. default result -2147483648
 void overflow_signed_int_multi(int x) {
     fprintf(pFile2,"The max signed int value is %d\n", INT_MAX);
     int result = 1;
@@ -73,7 +72,7 @@ void overflow_signed_int_multi(int x) {
 }
 
 
-
+//using the Fibonacci sequence to detect the signed int overflow. default result -1323752223
 void overflow_signed_int_add(int x) {
     fprintf(pFile2,"The max signed int value is %d\n", INT_MAX);
     int result[2] = {1, 1};
@@ -97,6 +96,8 @@ void overflow_signed_int_add(int x) {
     }
 }
 
+
+//because divide by zero will cause a compiler error, so we use this method to detect the divided by zero
 int zero_devided_overflow(int x, int y) {
     if (y == 0) {
         fprintf(pFile2,"You want to devide %d by %d\n" ,x, y);
@@ -106,19 +107,7 @@ int zero_devided_overflow(int x, int y) {
     
 }
 
-//void zero_devided_overflow_new(int x) {
-//
-//    int i = x / 0;
-//    fprintf(pFile2,"Now we execute 100 /0, and the answer is %d\n",x,i );
-//    throw "We execute 100 / 0. There should be a compiler error.";
-//
-//}
-
-//int zero_devided_overflow_strange(int x, int y) {
-//    int result = x / y;
-//    return result;
-//}
-
+//using 2 power to detect the float overflow. Default result inf
 void overflow_float_multi(int x) {
     fprintf(pFile2,"The max signed float value is %e\n", __FLT_MAX__);
     float result = 1;
@@ -133,22 +122,7 @@ void overflow_float_multi(int x) {
     fprintf(pFile2,"The result is  %f\n.", result);
 }
 
-//void overflow_float_multi_double(int x) {
-//    fprintf(pFile2,"The max signed float value is %e\n", __FLT_MAX__);
-//    float result = 1;
-//    for (int i = 1; i <= x; i ++) {
-//        result *= 2;
-////        if (((double)result * double(2))> __FLT_MAX__) {
-//        if (isinf(result)) {
-//            fprintf(pFile2,"The overflow happens when 2^%u \n", i);
-//            fprintf(pFile2,"The overflow result is %f\n" , result);
-//            throw "float multiply overflow error";
-//        }
-//        result *= 2;
-//    }
-//    fprintf(pFile2,"The result is  %f\n.", result);
-//}
-
+//create and detect the inf adn ninf
 float inf_create() {
     return 1.0/0;
 }
@@ -165,6 +139,7 @@ float ninf_create() {
     return -1.0/0;
 }
 
+//observe the infinity properties
 void observe_inf_ninf() {
     float inf = inf_create();
     float ninf = ninf_create();
@@ -211,11 +186,18 @@ void observe_inf_ninf() {
     
 }
 
+
+//create nan and detect nan
 float nan_create() {
     //    return sqrt(-1);
     return inf_create()-inf_create();
 }
 
+bool detect_nan (float x) {
+    return isnan(x);
+}
+
+//observe the nan
 void observe_nan() {
     float nan = nan_create();
     float inf = inf_create();
@@ -251,9 +233,7 @@ void observe_nan() {
     
 }
 
-bool detect_nan (float x) {
-    return isnan(x);
-}
+//create and detect signed zero
 
 float create_pos_zero() {
     return 1/inf_create();
@@ -263,13 +243,15 @@ bool detect_pos_zero(float x) {
     return isinf(1.0/x);
 }
 
-bool detect_neg_zero(float x) {
-    return isinf(-1.0/x);
-}
 
 float create_neg_zero() {
     return 1/ninf_create();
 }
+
+bool detect_neg_zero(float x) {
+    return isinf(-1.0/x);
+}
+
 
 void observe_signed_zero(){
     float result = 1;
@@ -327,6 +309,8 @@ void observe_signed_zero(){
     
 }
 
+
+//testing the floating underflow to find if this system will use denormals to land to zero softly
 void floating_underflow() {
     
     float x = 1.23456 * mypow(10,-20) ;
@@ -379,7 +363,9 @@ void floating_underflow() {
 
 
 
-
+// pi approximation
+//I use the long double to do it.
+//If we need to use only double to do it. Shall we write add , multiply function to achieve it.
 
 void pi_approximation() {
     long double pi = 1;
@@ -400,24 +386,8 @@ double cal_single(int x) {
     return result;
 }
 
-//double mypow(double x, int y) {
-//    if (y >0) {
-//        for (int i = 1; i< y; i ++) {
-//            x = x*x;
-//        }
-//        return x;
-//    }
-//    else if (y < 0) {
-//        x = 1.0/x;
-//        for (int i = 1; i< -y; i ++) {
-//            x = x*x;
-//        }
-//        return x;
-//    }
-//    else return 1;
-//
-//}
 
+//power function
 double mypow(double x, int y)
 {
     double temp;

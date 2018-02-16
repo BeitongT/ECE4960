@@ -2,6 +2,9 @@
 extern FILE * pFile1;
 extern FILE * pFile2;
 
+
+//overload to handle exception
+
 bool handle_exception(void (*f)(int),int para) {
     fprintf(pFile2,"\n");
     try{

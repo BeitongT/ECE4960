@@ -8,6 +8,8 @@
 
 
 #include "header.h"
+
+//parameters to generate the concise report
 bool INT_OVERFLOW;
 bool DIVIDE_ZERO;
 bool FLOAT_OVERFLOW;
@@ -15,6 +17,8 @@ bool INFINITY_CREATE;
 bool NAN_CREATE;
 bool SIGNED_ZERO;
 bool FLOATING_UNDERFLOW;
+
+//define the output file
 FILE * pFile1;
 FILE * pFile2;
 
@@ -150,11 +154,8 @@ int main(int argc, const char * argv[]) {
     else fprintf(pFile1,"Denormals with soft landing            WRONG\n");
     fprintf(pFile2,"\n");
 
-    //FLOATING UNDERFLOW
-    fprintf(pFile2,"###########PI CALCULATION###########\n");
-    
-    
     //PI APPROXIMATION
+    fprintf(pFile2,"###########PI CALCULATION###########\n");
     pi_approximation();
     
     fclose (pFile1);
