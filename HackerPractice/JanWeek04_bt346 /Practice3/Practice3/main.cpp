@@ -169,3 +169,22 @@ int productAx(int * A,int *,int *b,int r,int c ) {
     return 0;
 }
 
+// networking 
+// os 
+// computer architecture 
+// programming
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
