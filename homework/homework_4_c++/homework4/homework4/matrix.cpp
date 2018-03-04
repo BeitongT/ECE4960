@@ -234,26 +234,49 @@ int productAx(Matrix* A, Matrix* X, Matrix* B){
         printf("Cannot Do Matrix Product.\n");
         return FAILED;
     }
-    int start = 0;
-    int start2 =0;
+    int startRow = 0;
+    int endRow =0;
+    int startCol = 0;
+    int endCol =0;
     int r = A->row;
     int c = X->col;
-    for (int i = 0; i< r; i++) {
-        start = (A->rowIndex)[i];
-        start2 = (A->rowIndex)[i+1];
-        (B->matrix)[i] = 0.0;
-        for (int j = 0; j < c; j ++) {
-            for(int p = start;p<start2;p++){
-                (B->matrix)[i] += (A->matrix)[p]*(X->matrix[A->colIndex[p]]);
-                
-            }
+    //    std::cout << r << std::endl;
+    //    std::cout << c << std::endl;
+    
+    for (int i = 0; i < r; i++) {
+        startRow = (A->rowIndex)[i];
+        endRow = (A->rowIndex)[i+1];
         
+        for (int j = 0; j < c; j ++) {
+            
+            (B->matrix)[i*c+j] = 0.0;
+            for(int p = startRow;p<endRow;p++){
+                
+                double left = (A->matrix)[p];
+                int colNum = (A->colIndex)[p];
+                
+                
+                startCol = (X->rowIndex)[colNum];
+                endCol = (X->rowIndex)[colNum + 1];
+                
+                for (int q = startCol; q < endCol; q++)
+                {
+                    int colNum2 = (X->colIndex)[q];
+                    double right = (X->matrix)[q];
+                    if (colNum2 == j){
+                        (B->matrix)[i*c+j] += left * right;
+                        
+                    }
+                }
+            }
+            
         }
         
     }
     return SUCCESS;
     
 }
+
 
 
 void printMatrixAll(Matrix *A)
