@@ -1,0 +1,1 @@
+![alt text](https://github.com/BeitongT/ECE4960/blob/master/HackerPractice/01JanWeek02_bt346/Practice1/Question.png)
