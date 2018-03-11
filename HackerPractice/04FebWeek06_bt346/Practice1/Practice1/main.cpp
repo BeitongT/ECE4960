@@ -2,10 +2,10 @@
  * FILENAME :  main.cpp
  *
  * DESCRIPTION :
- *       This is the HackPractice for the week4 class on Tuesday.
- *      This is to observe different methods to approximate the integration result.
+ *       This is the HackPractice for the week6 class on Tuesday.
+ *      This is to observe different result for different A.
  *
- * AUTHOR :   Beitong Tian        START DATE :    18 FEB. 15
+ * AUTHOR :   Beitong Tian        START DATE :    18 FEB. 27
  *
  * PLATFORM : C++ in MAC OS  IDE: Xcode
  *

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F723001A202381D00076AFFD"
-               BuildableName = "Practice1"
-               BlueprintName = "Practice1"
-               ReferencedContainer = "container:Practice1.xcodeproj">
+               BuildableName = "Practice4"
+               BlueprintName = "Practice4"
+               ReferencedContainer = "container:Practice4.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,9 +34,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F723001A202381D00076AFFD"
-            BuildableName = "Practice1"
-            BlueprintName = "Practice1"
-            ReferencedContainer = "container:Practice1.xcodeproj">
+            BuildableName = "Practice4"
+            BlueprintName = "Practice4"
+            ReferencedContainer = "container:Practice4.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -59,9 +59,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F723001A202381D00076AFFD"
-            BuildableName = "Practice1"
-            BlueprintName = "Practice1"
-            ReferencedContainer = "container:Practice1.xcodeproj">
+            BuildableName = "Practice4"
+            BlueprintName = "Practice4"
+            ReferencedContainer = "container:Practice4.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -78,9 +78,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F723001A202381D00076AFFD"
-            BuildableName = "Practice1"
-            BlueprintName = "Practice1"
-            ReferencedContainer = "container:Practice1.xcodeproj">
+            BuildableName = "Practice4"
+            BlueprintName = "Practice4"
+            ReferencedContainer = "container:Practice4.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

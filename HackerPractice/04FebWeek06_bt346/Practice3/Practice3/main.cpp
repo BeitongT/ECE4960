@@ -2,11 +2,11 @@
  * FILENAME :  main.cpp
  *
  * DESCRIPTION :
- *       This is the HackPractice for the week4 class on Thursday.
- *       Using the row-compressed storage to implement the vector product
+ *       This is the HackPractice for the week6 class on Thursday.
+ *       Calculate first and infinity norm of matrix.
  *
  *
- * AUTHOR :   Beitong Tian        START DATE : 18 Feb. 15
+ * AUTHOR :   Beitong Tian        START DATE : 18 Mar. 1
  *
  * PLATFORM : C++ in MAC OS  IDE: Xcode
  *

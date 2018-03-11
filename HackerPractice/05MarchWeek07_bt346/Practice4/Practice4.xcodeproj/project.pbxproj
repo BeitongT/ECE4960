@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F723001B202381D00076AFFD /* Practice1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Practice1; sourceTree = BUILT_PRODUCTS_DIR; };
+		F723001B202381D00076AFFD /* Practice4 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Practice4; sourceTree = BUILT_PRODUCTS_DIR; };
 		F723001E202381D00076AFFD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		F7230012202381D00076AFFD = {
 			isa = PBXGroup;
 			children = (
-				F723001D202381D00076AFFD /* Practice1 */,
+				F723001D202381D00076AFFD /* Practice4 */,
 				F723001C202381D00076AFFD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		F723001C202381D00076AFFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F723001B202381D00076AFFD /* Practice1 */,
+				F723001B202381D00076AFFD /* Practice4 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F723001D202381D00076AFFD /* Practice1 */ = {
+		F723001D202381D00076AFFD /* Practice4 */ = {
 			isa = PBXGroup;
 			children = (
 				F723001E202381D00076AFFD /* main.cpp */,
 			);
-			path = Practice1;
+			path = Practice4;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F723001A202381D00076AFFD /* Practice1 */ = {
+		F723001A202381D00076AFFD /* Practice4 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7230022202381D00076AFFD /* Build configuration list for PBXNativeTarget "Practice1" */;
+			buildConfigurationList = F7230022202381D00076AFFD /* Build configuration list for PBXNativeTarget "Practice4" */;
 			buildPhases = (
 				F7230017202381D00076AFFD /* Sources */,
 				F7230018202381D00076AFFD /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Practice1;
+			name = Practice4;
 			productName = Practice1;
-			productReference = F723001B202381D00076AFFD /* Practice1 */;
+			productReference = F723001B202381D00076AFFD /* Practice4 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F7230016202381D00076AFFD /* Build configuration list for PBXProject "Practice1" */;
+			buildConfigurationList = F7230016202381D00076AFFD /* Build configuration list for PBXProject "Practice4" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +109,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F723001A202381D00076AFFD /* Practice1 */,
+				F723001A202381D00076AFFD /* Practice4 */,
 			);
 		};
 /* End PBXProject section */
@@ -248,7 +248,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F7230016202381D00076AFFD /* Build configuration list for PBXProject "Practice1" */ = {
+		F7230016202381D00076AFFD /* Build configuration list for PBXProject "Practice4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7230020202381D00076AFFD /* Debug */,
@@ -257,7 +257,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7230022202381D00076AFFD /* Build configuration list for PBXNativeTarget "Practice1" */ = {
+		F7230022202381D00076AFFD /* Build configuration list for PBXNativeTarget "Practice4" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F7230023202381D00076AFFD /* Debug */,

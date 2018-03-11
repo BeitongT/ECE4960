@@ -1,0 +1,27 @@
+The total iteration time is: 33
+My matrix is:
+ -0.379310   
+ -0.408348   
+ -0.116152   
+ -0.056261   
+ -0.108893   
+||b-Ax||2 for iterative solver : 2.74782e-07
+
+direct solver result is 
+  -0.37931
+ -0.408348
+ -0.116152
+-0.0562613
+ -0.108893
+||b-Ax||2 for direct solver : 1.55158e-17
+    0 -0.25     0    -0 -0.25
+   -1     0 -0.25     0     0
+    0 -0.25     0 -0.25     0
+    0     0 -0.25     0 -0.25
+-0.25     0    -0 -0.25    -0
+||D-1(L+U)|| first norm : 1.25
+||D-1(L+U)|| infinite norm : 1.25
+||(D-L)-1*U|| first norm : 0.917969
+||(D-L)-1*U|| infinite norm : 0.75
+
+Both of the norm should be less than 1.
