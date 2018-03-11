@@ -1,0 +1,45 @@
+******LAB2******
+
+The result for testing Constructor module: 0
+constructor test passed
+
+The test result for testing matrix product: 6.47269e-08
+matrix product test passed
+
+Check if the matrix will convergence.
+This matrix will convergence!
+
+the tolerance is 1e-7
+iteration time: 3
+current mem use for b1: 57344
+time for b1: 0.00446 s
+residual for b1 : 8.92558e-07
+
+iteration time: 3
+current mem use for b2: 65536
+time for b1: 0.003878 s
+residual for b2 : 1.01347e-06
+
+iteration time: 5
+current mem use for b3: 53248
+time for b1: 0.006232 s
+residual for b3 : 1.24081e-07
+
+the tolerance is 1e-10
+iteration time: 4
+current mem use for b1: 253952
+time for b1: 0.00531 s
+residual for b1 : 3.52298e-08
+
+iteration time: 4
+current mem use for b2: 225280
+time for b1: 0.00552 s
+residual for b2 : 4.02337e-08
+
+iteration time: 7
+current mem use for b3: 704512
+time for b1: 0.00919 s
+residual for b3 : 2.13235e-10
+
+So, additional implementation achieves better results.
+

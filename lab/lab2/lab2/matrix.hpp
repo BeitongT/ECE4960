@@ -1,6 +1,6 @@
 //
 //  matrix.hpp
-//  homework4
+//  lab2 version
 //
 //  Created by Beitong Tian on 3/2/18.
 //  Copyright © 2018 Beitong Tian. All rights reserved.
@@ -17,17 +17,21 @@
 #include <algorithm>    // std::max
 #include <fstream>
 
+#include <mach/mach.h>
+#include <mach/vm_statistics.h>
+#include <mach/mach_types.h>
+#include <mach/mach_init.h>
+#include <mach/mach_host.h>
+
 using namespace std;
 
 #define SUCCESS 0;
 #define FAILED 1;
-#define NULLERROR 2;
-#define STACKERROR 3;
+
 
 int retrieveElement(double *matrix, double **outmatrix,int **rowId, int **colID, int row, int col);
 
-
-
+//constructor and construct functions
 typedef struct Matrix{
 public:
     int row;
@@ -67,34 +71,33 @@ public:
     }
 } Matrix;
 
-int rowPermuteSingle(Matrix *A, int i, int j);
-int rowPermute(Matrix *A, Matrix *B, int i, int j);
-int rowScaleSingle(Matrix *A, int i, int j, double a);
-int rowScale(Matrix *A, Matrix *B, int i, int j, double a);
-int productAx(Matrix* A, Matrix* X, Matrix* B);
+void readValues(Matrix *A);
+void isConvergenceC(Matrix *A);
 
+//calculate function
+int productAx(Matrix* A, Matrix* X, Matrix* B);
+int Jacobi(Matrix *A, Matrix *B, Matrix *C);
+
+//print function
 void printMatrixAll(Matrix *A);
 void printMatrix(Matrix *A);
 void printMatrixNumber(Matrix *A);
 void printMatrixRowIndex(Matrix *A);
 void printMatrixColIndex(Matrix *A);
 void printMatrixValues(Matrix *A);
-void printFullMatrix(Eigen::MatrixXd A);
 
+//free heap memory
 void freeMemory(Matrix *A);
-double testMatrix(Matrix *A,Eigen::MatrixXd B);
-double testMatrix2(Matrix *A,Matrix *B);
 
-int Jacobi(Matrix *A, Matrix *B, Matrix *C);
-void Jacobi2(float *a,float *b,int row);
-int retrieveElementOut(Matrix *fullmatrix);
-double* returnToFull(Matrix *A);
+//calculate the residual
 double* twoArraySub(double *A, double*B, int length);
 double second_Norm(double *A, int length);
-void isConvergenceC(Matrix *A);
 double calResidual(Matrix *A, double *B, Matrix *X);
-void readValues(Matrix *A);
 
+//test functions
+double mattixProductTest(Matrix *A);
+long long current_used_mem();
+double testConstructor(Matrix *A,double * B);
 
 
 #endif /* matrix_hpp */
