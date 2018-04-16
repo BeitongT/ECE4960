@@ -73,7 +73,11 @@ double calEstimatedError(double K1, double K2, double K3, double K4, double last
     return 1.0 / 72.0 * (-5.0 * K1 + 6.0 * K2 + 8.0 * K3 - 9.0 * K4) * deltaT;
 }
 double Feasible(double Er, double EA, double Ei, double Xi, double Hi) {
-    return double(Hi * pow((Er / (Ei / Xi + EA)), 1.0/3));
+//    if(Ei/Xi > )
+    Er = 0.01;
+    EA = 1e-7;
+
+    return Hi * pow((Er / (Ei / (Xi + EA))), 1.0/3);
 }
 
 int main(int argc, const char * argv[]) {
