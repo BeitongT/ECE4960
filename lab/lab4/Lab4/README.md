@@ -1,5 +1,6 @@
 <h3>Introduction</h3>
 <p>In this lab, we need to use ODE solver (forward euler method, RK4, RK34) to solve two circuits.</p>
+<br><br>
 
 <h3>Folder structure</h3>
 <p>In Lab4 foler, there are source code for this lab. </p>
@@ -8,7 +9,7 @@
 <p>In task3 foler, there are the result images for the test case. </p>
 <p>In task4 foler, there are the result images for the RC circuit. </p>
 <p>In task5 foler, there are the result images for the EKV module circuit. </p>
-
+<br><br>
 
 <h3>task2</h3>
 <p>
@@ -29,26 +30,28 @@ INHERITANCE:
 
 3. For RK34, I used the time adaptation equation I used in my assignment.
 </p>
+<br><br>
 
 <h3>task3 (test case)</h3>
 <img src="./task3/task3_forwardEuler.png">
 <img src="./task3/task3_RK4.png">
 <img src="./task3/task3_RK34.png">
 <img src="./task3/Compare.png">
-
+<br><br>
 
 <h3>task4 (RC circuit)</h3>
 <img src="./task4/V1 delta = 1ns.png">
-<img src="./task4/V1 delta = 0.2ns.pngg">
+<img src="./task4/V1 delta = 0.2ns.png">
 <img src="./task4/V2 delta = 1ns.png">
 <img src="./task4/V2 delta = 0.2ns.png">
+<br><br>
 
 <h3>task5 (EKV module)</h3>
 <img src="./task5/V1 delta = 1ns EKV.png">
-<img src="./task5/V1 delta = 0.2ns EKV.pngg">
+<img src="./task5/V1 delta = 0.2ns EKV.png">
 <img src="./task5/V2 delta = 1ns EKV.png">
 <img src="./task5/V2 delta = 0.2ns EKV.png">
-
+<br><br>
 
 
 
