@@ -14,7 +14,7 @@
 <p>
 CHANGES:
 
-1.I change the inputs of my previous assignment. 
+1. I change the inputs of my previous assignment. 
 In my previous assignment, I use a outer for loop to give the time to the solver.
 While in lab4, I set exit time and delta time to the input of the function, so I can change the simulation time and interval easily.
 
