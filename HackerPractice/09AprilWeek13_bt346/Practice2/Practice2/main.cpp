@@ -2,7 +2,7 @@
  * FILENAME :  main.cpp
  *
  * DESCRIPTION :
- *      2D PDE solver
+ *      Downwind backward euler to solve the 1D Hyperbolic Problem
  *
  * AUTHOR :   Beitong Tian        START DATE :    18 Apr. 20
  *
@@ -26,44 +26,43 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     //use the matrix solever to solve the matrix
-    double arrayA[81] = {-4, 1, 0, 1, 0, 0, 0, 0, 0,
-                          1,-4, 1, 0, 1, 0, 0, 0, 0,
-                          0, 1,-4, 0, 0, 1, 0, 0, 0,
-                          1, 0, 0,-4, 1, 0 ,1, 0, 0,
-                          0, 1, 0, 1,-4, 1, 0, 1, 0,
-                          0, 0, 1, 0, 1,-4, 0, 0, 1,
-                          0, 0, 0, 1, 0, 0,-4, 1, 0,
-                          0, 0, 0, 0, 1, 0, 1,-4, 1,
-                          0, 0, 0, 0, 0, 1, 0, 1,-4 };
-    Matrix *matrixA = new Matrix(arrayA,9,9);
-    double h = 10 * 1.0e-6;
-    double hs = h * h;
-    double BC = 1.0;
-    double Na = -1.0e17 / 1.0e6;
-    double Nd = 1.0e15 / 1.0e6;
-    double temp1 = hs * Na - 2.0 * BC;
-    double temp2 = - hs * Nd;
+    double arrayA[49] = { 0, 0, 0, 0, 0, 0, 0,
+                          1, 0, 0, 0, 0, 0, 0,
+                          0, 1, 0, 0, 0, 0, 0,
+                          0, 0, 1, 0, 0, 0, 0,
+                          0, 0, 0, 1, 0, 0, 0,
+                          0, 0, 0, 0, 1, 0, 0,
+                          0, 0, 0, 0, 0, 0, 0};
+    Matrix *matrixA = new Matrix(arrayA,7,7);
+
     
-    double b[9] = { temp1,
-                    temp1,
-                    temp2,
-                    temp2,
-                    temp2,
-                    temp2,
-                    temp2,
-                    temp2,
-                    temp2
+    double b[7] = { 0,
+                    0,
+                    10,
+                    0,
+                    0,
+                    0,
+                    0
     };
-    Matrix *matrixB = new Matrix(b,9,1);
+    Matrix *matrixB = new Matrix(b,7,1);
     
-    double result[9] = {0};
-    fill_n(result,9,1.0);
-    Matrix *matrixResult = new Matrix(result,9,1);
+    double result[7] = {0};
+    fill_n(result,7,1.0);
+    Matrix *matrixResult = new Matrix(result,7,1);
+    Matrix *matrixResultKeep = new Matrix(result,7,1);
+
     
-    Jacobi(matrixA, matrixB, matrixResult);
-    
+    productAx(matrixA, matrixB, matrixResult);
+    cout << "time = " << 1 << " ";
     printMatrix(matrixResult);
-    
+    for (int i = 2; i <= 5; i++) {
+        matrixB = matrixResult;
+        Matrix *matrixResult = new Matrix(result,7,1);
+        cout << "time = " << i << " ";
+        productAx(matrixA, matrixB, matrixResult);
+        printMatrix(matrixResult);
+       
+    }
     return 0;
 }
 

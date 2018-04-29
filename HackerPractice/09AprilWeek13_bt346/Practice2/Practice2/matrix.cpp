@@ -272,7 +272,7 @@ int Jacobi(Matrix *A, Matrix *B, Matrix *C) {
 
     delete [] resultHis;
 
-    std::cout << count << std::endl;
+    //std::cout << count << std::endl;
     return SUCCESS;
 }
 
@@ -497,5 +497,14 @@ double testConstructor(Matrix *A,double * B) {
         }
     }
     return sqrt(sum);
+}
+
+void copyMatrix(Matrix *sourse, Matrix *copy) {
+    *(copy->matrix) = *(sourse->matrix);
+    copy->col = sourse->col;
+    *(copy->colIndex) = *(sourse->colIndex);
+    copy->row = sourse->row;
+    *(copy->rowIndex) = *(sourse->rowIndex);
+    copy->totalElement = sourse->totalElement;
 }
 

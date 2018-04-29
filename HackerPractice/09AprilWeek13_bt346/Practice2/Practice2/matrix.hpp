@@ -98,5 +98,7 @@ double mattixProductTest(Matrix *A);
 long long current_used_mem();
 double testConstructor(Matrix *A,double * B);
 
+void copyMatrix(Matrix *sourse, Matrix *copy);
+
 
 #endif /* matrix_hpp */
